@@ -1,6 +1,7 @@
 package matrix
 
 import (
+	"github.com/RanjeetKaur17/go-coding-practice/arrays"
 	"testing"
 )
 
@@ -9,7 +10,7 @@ func Test_rotate(t *testing.T) {
 		{1},
 	})
 
-	if !matrxiEquals(A, [][]int{{1}}) {
+	if !arrays.MatrxiEquals(A, [][]int{{1}}) {
 		t.Fail()
 	}
 
@@ -18,7 +19,7 @@ func Test_rotate(t *testing.T) {
 		{3,4},
 	})
 
-	if !matrxiEquals(A, [][]int{{3,1}, {4,2}}) {
+	if !arrays.MatrxiEquals(A, [][]int{{3,1}, {4,2}}) {
 		t.Fail()
 	}
 
@@ -28,7 +29,7 @@ func Test_rotate(t *testing.T) {
 		{7,8,9},
 	})
 
-	if !matrxiEquals(A, [][]int{{7,4,1}, {8,5,2}, {9,6,3}}) {
+	if !arrays.MatrxiEquals(A, [][]int{{7,4,1}, {8,5,2}, {9,6,3}}) {
 		t.Fail()
 	}
 
@@ -39,31 +40,7 @@ func Test_rotate(t *testing.T) {
 		{13,14,15,16},
 	})
 
-	if !matrxiEquals(A, [][]int{{13,9,5,1}, {14,10,6,2}, {15,11,7,3}, {16,12,8,4}}) {
+	if !arrays.MatrxiEquals(A, [][]int{{13,9,5,1}, {14,10,6,2}, {15,11,7,3}, {16,12,8,4}}) {
 		t.Fail()
 	}
-}
-
-func matrxiEquals(a [][]int, b [][]int) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	for i, v := range a {
-		if !arrayEquals(v, b[i]) {
-			return false
-		}
-	}
-	return true
-}
-
-func arrayEquals(a []int, b []int) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	for i, v := range a {
-		if v != b[i] {
-			return false
-		}
-	}
-	return true
 }
