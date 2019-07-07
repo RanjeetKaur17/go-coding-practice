@@ -1,7 +1,7 @@
 package matrix
 
 import (
-	"github.com/RanjeetKaur17/go-coding-practice/arrays"
+	"github.com/RanjeetKaur17/go-coding-practice/data-structures/arrays"
 	"testing"
 )
 

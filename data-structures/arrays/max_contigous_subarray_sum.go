@@ -1,4 +1,4 @@
-package subarray
+package arrays
 
 import "math"
 
