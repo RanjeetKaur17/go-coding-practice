@@ -12,8 +12,8 @@ Sample Output:
 0
 */
 
-//Find Minimum number in a rotated matrix with unique values
-func MinRotatedMatrix(A []int) int {
+//Find Minimum number in a rotated array with unique values
+func MinRotatedArray(A []int) int {
 	if len(A) == 0 {
 		return -1
 	}
@@ -26,7 +26,7 @@ func MinRotatedMatrix(A []int) int {
 			mid = mid+1
 			break
 		} else if A[start] < A[mid] {
-			start = mid
+			start = mid+1
 		} else {
 			end = mid
 		}
@@ -34,4 +34,28 @@ func MinRotatedMatrix(A []int) int {
 	}
 
 	return A[mid]
+}
+
+//Find Index of Minimum number in a rotated array with unique values
+func MinRotatedArrayIndex(A []int) int {
+	if len(A) == 0 {
+		return -1
+	}
+	if A[0] < A[len(A)-1] {
+		return 0
+	}
+	start, end, mid := 0, len(A) - 1, (len(A) - 1)/2
+	for start < end {
+		if A[mid]  > A[mid+1] {
+			mid = mid+1
+			break
+		} else if A[start] < A[mid] {
+			start = mid+1
+		} else {
+			end = mid
+		}
+		mid = (start+end)/2
+	}
+
+	return mid
 }

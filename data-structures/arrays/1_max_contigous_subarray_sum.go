@@ -12,7 +12,7 @@ Sample Output:
 6
 */
 
-//Method to return Max Contigous Subarray Sum
+//Find Max Contigous Subarray Sum
 func MaxSubArraySum(A []int) int {
 	max := math.MinInt32
 

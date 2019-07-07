@@ -27,7 +27,7 @@ func SquareRoot(n int) int {
 			root = mid
 			break
 		} else if mid * mid > n {
-			end = mid
+			end = mid+1
 		} else {
 			start = mid
 		}
