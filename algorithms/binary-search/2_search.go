@@ -12,15 +12,21 @@ Sample Output:
 
 //Search number in a sorted array
 func Search(A []int, N int) int {
+
+	//If array is empty return
 	if len(A) == 0 {
 		return -1
 	}
+
+	//If array has only one element, check that element and return
 	if len(A) == 1 {
 		if A[0] == N {
 			return 0
 		}
 		return -1
 	}
+
+	//binary search
 	start, end, mid := 0, len(A) - 1, (len(A) - 1)/2
 	for start < end {
 		if A[mid] == N {
@@ -33,6 +39,7 @@ func Search(A []int, N int) int {
 		mid = (start+end)/2
 	}
 
+	//check if value was not found
 	if A[mid] != N {
 		return -1
 	}

@@ -13,16 +13,20 @@ Sample Output:
 
 //Find Square Root of an Integer
 func SquareRoot(n int) int {
-	if n <=0 {
+	//If invalid input return
+	if n <= 0 {
 		return 0
 	}
+	//If value is 1 return 1
 	if n == 1 {
 		return n
 	}
 	root := n
 
+	//binary search
 	start, end, mid := 0, n, n/2
 	for start < end {
+		//check if mid is root or floor of root
 		if mid * mid == n || (mid * mid < n && (mid+1) * (mid+1) > n) {
 			root = mid
 			break

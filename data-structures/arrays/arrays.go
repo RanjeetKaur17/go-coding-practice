@@ -1,6 +1,6 @@
 package arrays
 
-func MatrxiEquals(a [][]int, b [][]int) bool {
+func MatrxEquals(a [][]int, b [][]int) bool {
 	if len(a) != len(b) {
 		return false
 	}

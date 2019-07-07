@@ -18,8 +18,10 @@ func SearchRotatedArray(A []int, N int) int {
 		return -1
 	}
 
+	//find Point of rotation
 	i := MinRotatedArrayIndex(A)
 
+	//Search in part where value exists
 	if A[len(A)-1] >= N {
 		return Search(A[i:], N)
 	} else {

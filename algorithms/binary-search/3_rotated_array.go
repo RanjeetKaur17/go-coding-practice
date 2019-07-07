@@ -14,12 +14,18 @@ Sample Output:
 
 //Find Minimum number in a rotated array with unique values
 func MinRotatedArray(A []int) int {
+
+	//If array is empty return
 	if len(A) == 0 {
 		return -1
 	}
+
+	//If array is not rotated return
 	if A[0] < A[len(A)-1] {
 		return A[0]
 	}
+
+	//binary search
 	start, end, mid := 0, len(A) - 1, (len(A) - 1)/2
 	for start < end {
 		if A[mid]  > A[mid+1] {
@@ -38,12 +44,18 @@ func MinRotatedArray(A []int) int {
 
 //Find Index of Minimum number in a rotated array with unique values
 func MinRotatedArrayIndex(A []int) int {
+
+	//If array is empty return
 	if len(A) == 0 {
 		return -1
 	}
+
+	//If array is not rotated return
 	if A[0] < A[len(A)-1] {
 		return 0
 	}
+
+	//binary search
 	start, end, mid := 0, len(A) - 1, (len(A) - 1)/2
 	for start < end {
 		if A[mid]  > A[mid+1] {

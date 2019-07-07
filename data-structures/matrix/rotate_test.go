@@ -10,7 +10,7 @@ func Test_rotate(t *testing.T) {
 		{1},
 	})
 
-	if !arrays.MatrxiEquals(A, [][]int{{1}}) {
+	if !arrays.MatrxEquals(A, [][]int{{1}}) {
 		t.Fail()
 	}
 
@@ -19,7 +19,7 @@ func Test_rotate(t *testing.T) {
 		{3,4},
 	})
 
-	if !arrays.MatrxiEquals(A, [][]int{{3,1}, {4,2}}) {
+	if !arrays.MatrxEquals(A, [][]int{{3,1}, {4,2}}) {
 		t.Fail()
 	}
 
@@ -29,7 +29,7 @@ func Test_rotate(t *testing.T) {
 		{7,8,9},
 	})
 
-	if !arrays.MatrxiEquals(A, [][]int{{7,4,1}, {8,5,2}, {9,6,3}}) {
+	if !arrays.MatrxEquals(A, [][]int{{7,4,1}, {8,5,2}, {9,6,3}}) {
 		t.Fail()
 	}
 
@@ -40,7 +40,7 @@ func Test_rotate(t *testing.T) {
 		{13,14,15,16},
 	})
 
-	if !arrays.MatrxiEquals(A, [][]int{{13,9,5,1}, {14,10,6,2}, {15,11,7,3}, {16,12,8,4}}) {
+	if !arrays.MatrxEquals(A, [][]int{{13,9,5,1}, {14,10,6,2}, {15,11,7,3}, {16,12,8,4}}) {
 		t.Fail()
 	}
 }
