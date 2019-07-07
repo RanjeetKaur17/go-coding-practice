@@ -14,13 +14,18 @@ Sample Output:
 
 //Check if two numbers exist in the sorted array with difference K
 func DiffKPossible(A []int , B int )  int {
-	i :=0
+	i, j := 0, 0
 
 	for i < len(A) {
-		j := i+1
-		for j < len(A) &&A[j]-A[i] < B {
+		//j continued from last value, but increment j if it is same as i
+		if j == i {
+			j = i + 1
+		}
+		//Check if solution possible from i
+		for j < len(A) && A[j]-A[i] < B {
 			j++
 		}
+		//If solution found return
 		if j < len(A) && A[j] - A[i] == B {
 			return 1
 		}
