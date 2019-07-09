@@ -26,6 +26,8 @@ func RomanToInt(A string)  (int) {
 	for i := range A {
 		mul := 1
 
+		// If a smaller value comes before bigger value,
+		// then this value needs to be subtracted from the bigger value to get the addition
 		if i < len(A) - 1 && mapping[A[i]] < mapping[A[i+1]] {
 			mul = -1
 		}
