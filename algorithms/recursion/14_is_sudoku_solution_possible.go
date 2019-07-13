@@ -33,6 +33,7 @@ Sample Output:
 ]
 */
 
+//Check if solution is possible or not for a partial sudoku
 func IsSolutionPossible(A [][]int) bool {
 	solveSudoku(A,0,0)
 
