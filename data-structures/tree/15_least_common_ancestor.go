@@ -17,18 +17,12 @@ Sample Output:
 3
 */
 
-type treeNode struct {
-	left *treeNode
-	value int
-	right *treeNode
-}
-
-func LCA(A *treeNode , B int , C int )  (int) {
+func LCA(A *Tree, B int , C int )  (int) {
 	l, _, _ := lca(A, B, C)
 	return l
 }
 
-func lca(A *treeNode , B int , C int )  (int, bool, bool) {
+func lca(A *Tree, B int , C int )  (int, bool, bool) {
 	if A == nil {
 		return -1, false, false
 	} else {

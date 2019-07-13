@@ -2,25 +2,8 @@ package tree
 
 import "testing"
 
-/*Problem Statement:
-Find the lowest common ancestor in an unordered binary tree given two values in the tree.
-
-Sample Input:
-        _______3______
-       /              \
-    ___5__          ___1__
-   /      \        /      \
-   6      _2_     0        8
-         /   \
-         7    4
-5 & 1
-
-Sample Output:
-3
-*/
-
 func Test_LCA(t *testing.T) {
-	root := Tree()
+	root := SampleTree()
 
 	lca := LCA(root, 7,4)
 	if lca != 2 {
@@ -58,30 +41,30 @@ func Test_LCA(t *testing.T) {
 	}
 }
 
-func Tree() *treeNode {
-	return &treeNode{
+func SampleTree() *Tree {
+	return &Tree{
 		value:3,
-		left:&treeNode{
+		left:&Tree{
 			value:5,
-			left:&treeNode{
+			left:&Tree{
 				value:6,
 			},
-			right:&treeNode{
+			right:&Tree{
 				value:2,
-				left:&treeNode{
+				left:&Tree{
 					value:7,
 				},
-				right:&treeNode{
+				right:&Tree{
 					value:4,
 				},
 			},
 		},
-		right:&treeNode{
+		right:&Tree{
 			value:1,
-			left:&treeNode{
+			left:&Tree{
 				value:0,
 			},
-			right:&treeNode{
+			right:&Tree{
 				value:8,
 			},
 		},
