@@ -21,7 +21,7 @@ func Test_IsValidBST(t *testing.T) {
 		t.Fail()
 	}
 
-	isValid = IsValidBST(&BinaryTree{value: 1})
+	isValid = IsValidBST(&BinaryTreeNode{value: 1})
 
 	if !isValid {
 		t.Fail()

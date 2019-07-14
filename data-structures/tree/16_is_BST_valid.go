@@ -13,7 +13,7 @@ False
 */
 
 //Check if given tree is a valid BST(binary search tree)
-func IsValidBST(A *BinaryTree)  bool {
+func IsValidBST(A *BinaryTreeNode)  bool {
 	//get in-order traversal
 	a := inOrder(A)
 
@@ -29,7 +29,7 @@ func IsValidBST(A *BinaryTree)  bool {
 }
 
 //Get InOrder traversal of a tree
-func inOrder(A *BinaryTree) []int {
+func inOrder(A *BinaryTreeNode) []int {
 	//if current node is nil return nothing
 	if A == nil {
 		return  nil

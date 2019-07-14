@@ -17,12 +17,12 @@ Sample Output:
 3
 */
 
-func LCA(A *BinaryTree, B int , C int )  (int) {
+func LCA(A *BinaryTreeNode, B int , C int )  (int) {
 	l, _, _ := lca(A, B, C)
 	return l
 }
 
-func lca(A *BinaryTree, B int , C int )  (int, bool, bool) {
+func lca(A *BinaryTreeNode, B int , C int )  (int, bool, bool) {
 	if A == nil {
 		return -1, false, false
 	} else {

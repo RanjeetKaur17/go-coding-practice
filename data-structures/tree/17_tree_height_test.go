@@ -15,7 +15,7 @@ func Test_Height(t *testing.T) {
 		t.Fail()
 	}
 
-	height = Height(&BinaryTree{value: 1})
+	height = Height(&BinaryTreeNode{value: 1})
 	if height != 1 {
 		t.Fail()
 	}
