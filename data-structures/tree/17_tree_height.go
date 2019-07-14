@@ -17,7 +17,8 @@ Sample Output:
 4
 */
 
-func Height(A *Tree)  int {
+//Get Height of a binary tree
+func Height(A *BinaryTree)  int {
 	//If current node is nil, return height as 0
 	if A == nil {
 		return 0

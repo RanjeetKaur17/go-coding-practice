@@ -3,7 +3,7 @@ package tree
 import "testing"
 
 func Test_Height(t *testing.T) {
-	root := SampleTree()
+	root := SampleBinaryTree()
 
 	height := Height(root)
 	if height != 4 {
@@ -15,7 +15,7 @@ func Test_Height(t *testing.T) {
 		t.Fail()
 	}
 
-	height = Height(&Tree{value:1})
+	height = Height(&BinaryTree{value: 1})
 	if height != 1 {
 		t.Fail()
 	}
