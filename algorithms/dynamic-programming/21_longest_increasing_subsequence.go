@@ -22,11 +22,14 @@ func LongestIncreasingSubsequence(A []int)  int {
 
 	max := 1
 	for i := 1; i < len(A); i++ {
+		//For each element till current
 		for j := i-1; j >= 0; j-- {
+			//if longest subsequence +1 is greater than current and value is less than current, set value as current longest subsequence
 			if A[j] < A[i] && dp[j]+1 > dp[i] {
 				dp[i] = dp[j]+1
 			}
 		}
+		//Get max length for longest subsequence, till now
 		if dp[i] > max {
 			max = dp[i]
 		}
