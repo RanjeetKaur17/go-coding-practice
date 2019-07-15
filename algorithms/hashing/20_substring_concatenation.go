@@ -70,13 +70,16 @@ func hasAllWords(A string , wm map[string]int ) bool {
 	start, end := 0, 0
 	for i := range A {
 		//check if current substring is a word
-		if val, ok := wm[A[start:end+1]]; ok {
+		if _, ok := wm[A[start:end+1]]; ok {
 			//if yes, update map
 			wm[A[start:end+1]]--
 			//if count in map goes negative, return false
-			if val < 0 {
+			if wm[A[start:end+1]] < 0 {
 				return false
+			} else if wm[A[start:end+1]] == 0 {
+				delete(wm, A[start:end+1])
 			}
+
 			start = i+1
 			end = i
 		}
@@ -84,10 +87,8 @@ func hasAllWords(A string , wm map[string]int ) bool {
 	}
 
 	//check if all elements found or not
-	for _, count := range wm {
-		if count != 0 {
-			return false
-		}
+	if len(wm) != 0 {
+		return false
 	}
 	return true
 }
