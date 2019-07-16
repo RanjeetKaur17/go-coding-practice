@@ -1,6 +1,7 @@
 package tree
 
-/*Problem Statement:
+/*
+Problem Statement:
 Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
 The first call to next() will return the smallest number in BST. Calling next() again will return the next smallest number in the BST, and so on.
 */

@@ -1,6 +1,7 @@
 package two_pointers
 
-/*Problem Statement:
+/*
+Problem Statement:
 Given 2 sorted arrays, find all the elements which occur in both the arrays.
 
 Sample Input:

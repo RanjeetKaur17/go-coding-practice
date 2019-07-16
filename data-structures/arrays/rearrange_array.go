@@ -1,6 +1,7 @@
 package arrays
 
-/*Problem Statement:
+/*
+Problem Statement:
 Rearrange a given array so that Arr[i] becomes Arr[Arr[i]] with O(1) extra space.
 
 Sample Input:

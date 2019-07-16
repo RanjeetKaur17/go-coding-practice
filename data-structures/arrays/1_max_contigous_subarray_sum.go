@@ -2,7 +2,8 @@ package arrays
 
 import "math"
 
-/*Problem Statement:
+/*
+Problem Statement:
 Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
 
 Sample Input:
@@ -42,7 +43,7 @@ func MaxSumSubArray(A []int) []int {
 
 	//Local Sum and indexes
 	tStart, tEnd, tSum := 0, 0, 0
-	
+
 	for i, v := range A {
 		tSum += v
 		//If local sum greater than max, set max

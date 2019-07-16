@@ -1,6 +1,7 @@
 package binary_search
 
-/*Problem Statement:
+/*
+Problem Statement:
 Search for a number in a sorted Array.
 
 Sample Input:

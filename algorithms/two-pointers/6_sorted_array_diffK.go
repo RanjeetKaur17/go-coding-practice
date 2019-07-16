@@ -1,6 +1,7 @@
 package two_pointers
 
-/*Problem Statement:
+/*
+Problem Statement:
 Given an array ‘A’ of sorted integers and another non negative integer k,
 find if there exists 2 indices i and j such that A[i] - A[j] = k, i != j.
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem

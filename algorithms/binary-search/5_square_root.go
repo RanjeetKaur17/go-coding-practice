@@ -1,6 +1,7 @@
 package binary_search
 
-/*Problem Statement:
+/*
+Problem Statement:
 Compute and return the square root of x.
 If x is not a perfect square, return floor(sqrt(x))
 
