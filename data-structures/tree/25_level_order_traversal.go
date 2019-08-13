@@ -1,5 +1,29 @@
 package tree
 
+/*
+Problem Statement:
+Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
+
+Sample Input:
+Sample Input:
+        _______3______
+       /              \
+    ___5__          ___1__
+   /      \        /      \
+   6      _2_     0        8
+         /   \
+         7    4
+
+Sample Output:
+[
+  [3],
+  [5,1],
+  [6,2,0,8],
+  [7,4]
+]
+*/
+
+//returns level order traversal
 func levelOrder(A *BinaryTreeNode )  [][]int {
 	if A == nil {
 		return nil
