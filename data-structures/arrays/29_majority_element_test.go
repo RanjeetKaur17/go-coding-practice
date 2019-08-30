@@ -6,7 +6,7 @@ func Test_MajorityElement(t *testing.T) {
 	min := MajorityElement([]int{})
 
 	if min != -1 {
-gs
+
 t.Fail()
 	}
 
