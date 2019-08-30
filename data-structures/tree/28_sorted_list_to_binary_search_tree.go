@@ -2,6 +2,19 @@ package tree
 
 import "github.com/RanjeetKaur17/go-coding-practice/data-structures/linked_list"
 
+/*
+Problem Statement:
+Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+
+Sample Input:
+1 -> 2 -> 3
+
+Sample Output:
+	2
+  /   \
+1	  3
+*/
+
 func sortedListToBST(list *linked_list.ListNode) *BinaryTreeNode {
 	var m []*linked_list.ListNode
 
