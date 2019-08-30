@@ -1,4 +1,4 @@
-package greedy
+package arrays
 
 import "testing"
 
@@ -6,7 +6,8 @@ func Test_MajorityElement(t *testing.T) {
 	min := MajorityElement([]int{})
 
 	if min != -1 {
-		t.Fail()
+gs
+t.Fail()
 	}
 
 	min = MajorityElement([]int{1})
